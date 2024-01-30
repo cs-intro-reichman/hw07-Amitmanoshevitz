@@ -22,11 +22,7 @@ public class HashTagTokenizer {
 	int i;
 		for(i = 0; i < dictionary.length; i++){
 		if(word.equals(dictionary[i])) {
-			wordInDi = true;
-			return wordInDi;	}
-
-		else {i++;
-		}
+			wordInDi = true;}
 	}
 		return wordInDi;
 	}
