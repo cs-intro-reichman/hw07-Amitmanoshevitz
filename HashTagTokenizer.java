@@ -10,22 +10,21 @@ public class HashTagTokenizer {
 	public static String[] readDictionary(String fileName) {
 		String[] dictionary = new String[3000];
 		In in = new In(fileName);
-			int i = 0;
-				while (i < 3000) {
+		int i;
+		for(i = 0; i < dictionary.length; i++){
 					dictionary[i] = in.readString();
-					i++;
 			}
 		return dictionary;
 	}
 
 	public static boolean existInDictionary(String word, String []dictionary) {
 	boolean wordInDi = false;
-	int i = 0;
-	while (i < 3000) {
-		if (word == dictionary[i]) {
+	int i;
+		for(i = 0; i < dictionary.length; i++){
+		if(word.equals(dictionary[i])) {
 			wordInDi = true;
 			return wordInDi;	}
-			
+
 		else {i++;
 		}
 	}
