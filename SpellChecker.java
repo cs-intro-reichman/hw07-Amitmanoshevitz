@@ -32,9 +32,7 @@ public class SpellChecker {
         int rep = levenshtein(tail(word1), tail(word2));
         int insert = levenshtein(tail(word1), word2);
         int re = 1 + Math.min(Math.min(insert, delete), rep);
-
-        return re;
-    }
+        return re;}
 
     public static String[] readDictionary(String fileName) {
         String[] dictionary = new String[3000];
@@ -43,8 +41,7 @@ public class SpellChecker {
         for (i = 0; i < dictionary.length; i++) {
             dictionary[i] = in.readString();
         }
-        return dictionary;
-    }
+        return dictionary;}
 
     public static String spellChecker(String word, int threshold, String[] dictionary) {
         String closestWord = word;
@@ -62,7 +59,6 @@ public class SpellChecker {
         if (minDistance > threshold) {
             return word;
         } else {
-            return closestWord;
-        }
+            return closestWord;}
     }
 }
